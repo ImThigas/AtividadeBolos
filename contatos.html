@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Contatos - Confeitaria Maria Chocolate</title>
+	<style>
+        *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #ffbbdd;
+    margin: 0;
+  }
+  
+  .left-div {
+    margin-right: auto;
+    margin: 0;
+  }
+  
+  .center-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    color: white;
+  }
+.nav{
+    background-color: #f0b0d0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+li{
+    padding:  15px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+section {
+  margin: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+    background-color: #ffbbdd;
+    padding: 5px;
+    text-align: center;
+    height: 25px; 
+    margin-top: 0px; 
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+    </style>
+	<script src="validacao.js"></script>
+</head>
+<body>
+	<header>
+		<div class="left-div">
+			<img src="imagens/logo.png" alt="Maria Chocolate" height="100" />
+		</div>
+		<div class="center-div">
+			<h1>Confeitando para a alegria da sua vida...</h1>
+		</div>
+	</header>
+	<nav class="nav">
+		<ul>
+			<li><a href="index.html" >Home</a></li>
+			<li><a href="#" >Bolos</a></li>
+			<li><a href="#" >Tortas</a></li>
+			<li><a href="#" >Festas</a></li>
+			<li><a href="contatos.html" >Contatos</a></li>			
+		</ul>
+	</nav>
+	
+	<section>
+		<h2>Entre em contato conosco</h2>
+		<form id="contatoForm" onsubmit="return validarForm()">
+			<div class="form-group">
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required>
+			</div>
+			<div class="form-group">
+				<label for="email">E-mail:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="mensagem">Mensagem:</label>
+				<textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+			</div>
+			<button type="submit">Enviar</button>
+		</form>
+	</section>
+
+	<footer>
+		<p class="content">Desenvolvido como exercício da UC Usabilidade, Desenvolvimento Web, Mobile e Jogos. ©2022. Todos os Direitos Reservados.</p>
+	</footer>
+</body>
+</html>
